@@ -14,5 +14,15 @@ const getAll = async (req,res) => {
     }
 
 }
+const displayReview = async (req, res) => {
+    let id = req.params.product_id
+    try {
+        let response = await axios.get(`/reviews/meta?product_id=${id}`)
+        res.send(response.data)
+    } catch (error) {
+        console.error(error)
+    }
 
-module.exports = {getAll}
+}
+
+module.exports = {getAll, displayReview}

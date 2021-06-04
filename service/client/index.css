@@ -5,3 +5,8 @@
 #response{
     background-color: #BEBEBE
 }
+img, svg, video, canvas, audio, iframe, embed, object {
+    display: inline;
+    width:12px;
+    padding-bottom: 17px
+}

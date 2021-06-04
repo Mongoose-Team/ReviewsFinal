@@ -20,7 +20,7 @@
       this.fetchData();
     }
     fetchData() {
-      axios("api/reviews/meta/11005")
+      axios("/api/reviews/meta/11005")
         .then((response) => {
           var data = response.data;
           var recommend = Object.values(response.data.recommended);

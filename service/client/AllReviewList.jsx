@@ -32,7 +32,7 @@ const AllReviewList = (props) => {
 
     // }, [])
 
-    axios.get("http://localhost:3001/api/reviews/11001")
+    axios.get("/api/reviews/11005")
       .then(function (response) {
         setData(response.data.results)
       })
@@ -54,18 +54,19 @@ const AllReviewList = (props) => {
 
   return (
     <div>
-      <p>
-        {data.filter((e, i) => i < count).map(review => {
-          // console.log(review)
-          return <div className="inline-block">
-
-            <div className="">
+      
+      <div className="">
               <select className="font-sans text-base antialiased font-black ml-20 py-4">
                 <option>248 reviews sorted by relevance </option>
                 <option>Helpful</option>
                 <option>Newest </option>
               </select>
             </div>
+      <p>
+        {data.filter((e, i) => i < count).map(review => {
+         
+          return <div className="inline-block">
+
 
             <li className="flex items-start ml-10 mt-1">
 
